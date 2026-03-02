@@ -3,7 +3,7 @@ NixOS configuration
 
 ## Build
 ```Shell
-sudo nixos-rebuild switch --flake /etc/nixos#nixos-zeta
+sudo nixos-rebuild switch --flake /etc/nixos#nixos
 ```
 ## Update
 ```Shell
