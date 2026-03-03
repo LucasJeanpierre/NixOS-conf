@@ -11,7 +11,8 @@
   };
 
   environment.shellAliases = {
-    nix-switch = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
-    nix-update = "pushd /etc/nixos && nix flake update && nix-switch && popd";
+    nix-switch = "sudo nixos-rebuild switch --flake $HOME/nixos-conf#nixos";
+    nix-update = "pushd $HOME/nixos-conf && nix flake update && nix-switch && popd";
+    nix-edit = "code $HOME/nixos-conf";
   };
 }

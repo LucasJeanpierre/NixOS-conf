@@ -1,11 +1,19 @@
 # NixOS-conf
 NixOS configuration
 
-## Build
+## Install
 ```Shell
-sudo nixos-rebuild switch --flake /etc/nixos#nixos
+git pull https://github.com/LucasJeanpierre/NixOS-conf.git ~/nixos-conf
+cp nixos-conf
+cp /etc/nixos/hardware-configuration.nix ~/nixos-conf && git add hardware-configuration.nix
+sudo nixos-rebuild switch --flake .#nixos
+```
+
+## Rebuild
+```Shell
+nix-switch
 ```
 ## Update
 ```Shell
-nix flake update --flake /etc/nixos
+nix-update
 ```
