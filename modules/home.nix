@@ -3,46 +3,48 @@
 
   home.packages = with pkgs; [
     everforest-gtk-theme
-    tokyonight-gtk-theme
     papirus-icon-theme
-    gnome-tweaks
-    gnome-extension-manager
-
-    gnomeExtensions.user-themes
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.dash-to-dock
-    gnomeExtensions.appindicator
+    bibata-cursors
+    
+    kdePackages.kcalc
+    kdePackages.spectacle
   ];
 
   gtk = {
     enable = true;
     theme = {
-      name = "Tokyonight-Dark-B";
-      package = pkgs.tokyonight-gtk-theme;
+      name = "Everforest-Dark-BL";
+      package = pkgs.everforest-gtk-theme;
     };
     iconTheme = {
       name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
     };
   };
 
+  programs.plasma = {
+    enable = true;
 
-  dconf.settings = {
-    "org/gnome/shell" = {
-      disable-user-extensions = false;
-      enabled-extensions = [
-        "user-theme@gnome-shell-extensions.gcampax.github.com"
-        "blur-my-shell@aunetx"
-        "dash-to-dock@micxgx.gmail.com"
-        "appindicatorsupport@rgcjonas.gmail.com"
-      ];
+    workspace = {
+      lookAndFeel = "org.kde.breezedark.desktop";
+      cursorTheme = "Bibata-Modern-Ice";
+      iconTheme = "Papirus-Dark";
     };
-    "org/gnome/shell/extensions/user-theme" = {
-      name = "Tokyonight-Dark-B";
-    };
-    "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
-      gtk-theme = "Tokyonight-Dark-B";
-    };
+
+    panels = [
+      {
+        location = "bottom";
+        height = 44;
+        widgets = [
+          "org.kde.plasma.kickoff"
+          "org.kde.plasma.pager"
+          "org.kde.plasma.icontasks"
+          "org.kde.plasma.marginsseparator"
+          "org.kde.plasma.systemtray"
+          "org.kde.plasma.digitalclock"
+        ];
+      }
+    ];
+
   };
+
 }
