@@ -12,18 +12,9 @@
     catppuccin-kvantum
     catppuccin-kde
     polonium
-  ];
 
-  #gtk = {
-  #  enable = true;
-  #  theme = {
-  #    name = "Everforest-Dark-BL";
-  #    package = pkgs.everforest-gtk-theme;
-  #  };
-  #  iconTheme = {
-  #    name = "Papirus-Dark";
-  #  };
-  #};
+    klassy
+  ];
 
   programs.plasma = {
     enable = true;
@@ -33,7 +24,6 @@
       theme = "catppuccin-mocha-lavender";
       cursorTheme = "Bibata-Modern-Ice";
       iconTheme = "Papirus-Dark";
-      # style = "kvantum";
     };
 
     kwin.virtualDesktops = {
@@ -41,7 +31,12 @@
       rows = 1;
     };
 
-    kwin.scripts.polonium.enable = true;
+    kwin.scripts.polonium = {
+      enable = true;
+      settings = {
+        borderVisibility = "noBorderAll";
+      };
+    };
 
     shortcuts = {
       "kwin" = {
@@ -65,20 +60,19 @@
     {
       location = "top";
       height = 32;
-      floating = true;
       alignment = "center";
+      opacity = "translucent";
       
       widgets = [
         "org.kde.plasma.kickoff"
         
         "org.kde.plasma.panelspacer"
         
-        "org.kde.plasma.icontasks"
+        "org.kde.plasma.digitalclock"
         
         "org.kde.plasma.panelspacer"
         
         "org.kde.plasma.systemtray"
-        "org.kde.plasma.digitalclock"
       ];
     }
   ];
