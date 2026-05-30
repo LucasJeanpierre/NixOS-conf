@@ -49,7 +49,10 @@
     };
   };
 
-  services.desktopManager.plasma6.enable = true;
+  catppuccin.enable = true;
+  catppuccin.sddm.enable = true;
+  catppuccin.gtk.icon.enable = true;
+  services.desktopManager.gnome.enable = true;
 
 
   # Configure keymap in X11
