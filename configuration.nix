@@ -39,19 +39,14 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # KDE Plama 6 Desktop Environment.
+  # GNOME Desktop Environment.
   services.displayManager = {
-    sddm = {
+    gdm = {
       enable = true;
-      wayland = {
-        enable = true;
-      };
     };
   };
 
   catppuccin.enable = true;
-  catppuccin.sddm.enable = true;
-  catppuccin.gtk.icon.enable = true;
   services.desktopManager.gnome.enable = true;
 
 

@@ -2,6 +2,8 @@
 
   environment.systemPackages = with pkgs; [
     kitty
+    bat
+    eza
   ];
 
   programs.zsh = {
@@ -15,10 +17,12 @@
     enable = true;
   };
 
-
   environment.shellAliases = {
-    nix-switch = "sudo nixos-rebuild switch --flake $HOME/nixos-conf#nixos";
-    nix-update = "pushd $HOME/nixos-conf && sudo nix flake update && popd";
-    nix-edit = "code $HOME/nixos-conf";
+    ls = "eza --icons --group-directories-first";
+    ll = "eza -la --icons --group-directories-first";
+    cat = "bat --style=auto";
+    nix-switch = "sudo nixos-rebuild switch --flake ~/nixos-conf#nixos";
+    nix-update = "nix flake update ~/nixos-conf && nix-switch";
+    nix-clean = "sudo nix-collect-garbage -d";
   };
 }
