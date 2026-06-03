@@ -3,6 +3,7 @@
     vscode
     python3
     git
+    gh
     gcc
     neovim
   ];
