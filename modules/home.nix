@@ -34,6 +34,10 @@
           "just-perfection-desktop@just-perfection"
           # "space-bar@luchrioh"
         ];
+        favorite-apps = [
+          "firefox.desktop"
+          "kitty.desktop"
+        ];
       };
 
       "org/gnome/shell/extensions/blur-my-shell" = {
@@ -99,4 +103,5 @@
       cursor_stop_blinking_after = 0;
     };
   };
+
 }
