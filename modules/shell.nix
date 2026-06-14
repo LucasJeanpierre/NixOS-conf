@@ -4,6 +4,7 @@
     kitty
     bat
     eza
+    htop
   ];
 
   programs.zsh = {
