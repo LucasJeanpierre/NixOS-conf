@@ -47,6 +47,8 @@
   };
 
   catppuccin.enable = true;
+  catppuccin.autoEnable = true;
+  
   services.desktopManager.gnome.enable = true;
 
 
