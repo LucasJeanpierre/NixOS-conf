@@ -58,6 +58,12 @@
         edge-tiling = true;
       };
 
+      "org/gnome/desktop/input-sources" = {
+        sources = [
+          [ "xkb" "us+intl" ]
+        ];
+      };
+
     };
   };
 
