@@ -71,7 +71,7 @@
   catppuccin = {
     enable = true;
     flavor = "mocha";
-    accent = "mauve";
+    accent = "sky";
   };
 
   programs = {
@@ -84,8 +84,8 @@
   gtk = {
     enable = true;
     cursorTheme = {
-      name    = "catppuccin-mocha-mauve-cursors";
-      package = pkgs.catppuccin-cursors.mochaMauve;
+      name    = "catppuccin-mocha-sky-cursors";
+      package = pkgs.catppuccin-cursors.mochaSky;
     };
   };
 
