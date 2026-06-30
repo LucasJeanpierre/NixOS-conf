@@ -24,7 +24,7 @@
       };
 
       "org/gnome/desktop/background" = {
-        picture-uri-dark = "file:///home/zeta/nixos-conf/assets/dark-cat.png";
+        picture-uri-dark = "file:///home/zeta/nixos-conf/assets/wallpaper_briancon.png";
       };
 
       "org/gnome/shell" = {
