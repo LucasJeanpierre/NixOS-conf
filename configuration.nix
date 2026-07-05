@@ -39,17 +39,12 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # GNOME Desktop Environment.
-  services.displayManager = {
-    gdm = {
-      enable = true;
-    };
-  };
 
-  catppuccin.enable = true;
-  catppuccin.autoEnable = true;
-  
-  services.desktopManager.gnome.enable = true;
+  # Enable the COSMIC login manager
+  services.displayManager.cosmic-greeter.enable = true;
+
+  # Enable the COSMIC desktop environment
+  services.desktopManager.cosmic.enable = true;
 
 
   # Configure keymap in X11

@@ -4,68 +4,8 @@
   home.homeDirectory = "/home/zeta";
 
   home.packages = with pkgs; [
-    gnome-tweaks
-    dconf-editor
-
-    gnomeExtensions.user-themes    
-    gnomeExtensions.just-perfection   
-    gnomeExtensions.dash-to-panel     
-    gnomeExtensions.space-bar
-
-    catppuccin-cursors.mochaMauve
     nerd-fonts.jetbrains-mono
   ];
-
-  dconf = {
-    enable = true;
-    settings = {
-      "org/gnome/desktop/interface" = {
-        color-scheme = "prefer-dark";
-      };
-
-      "org/gnome/desktop/background" = {
-        picture-uri-dark = "file:///home/zeta/nixos-conf/assets/wallpaper_briancon.png";
-      };
-
-      "org/gnome/shell" = {
-        disable-user-extensions = false;
-        enabled-extensions = [
-          "blur-my-shell@aunetx"
-          "just-perfection-desktop@just-perfection"
-          # "space-bar@luchrioh"
-        ];
-        favorite-apps = [
-          "firefox.desktop"
-          "kitty.desktop"
-        ];
-      };
-
-      "org/gnome/shell/extensions/blur-my-shell" = {
-        blur = true;
-        brightness = 0.5;
-        noise-amount = 0;
-      };
-
-      "org/gnome/shell/extensions/blur-my-shell/panel" = {
-        brightness = 0.5;
-        noise-amount = 0;
-        static-blur = true;
-        style-panel = 2;
-      };
-
-      "org/gnome/mutter" = {
-        dynamic-workspaces = true;
-        edge-tiling = true;
-      };
-
-      "org/gnome/desktop/input-sources" = {
-        sources = [
-          [ "xkb" "us+intl" ]
-        ];
-      };
-
-    };
-  };
 
 
   catppuccin = {
@@ -81,13 +21,6 @@
     bat.enable = true;
   };
 
-  gtk = {
-    enable = true;
-    cursorTheme = {
-      name    = "catppuccin-mocha-sky-cursors";
-      package = pkgs.catppuccin-cursors.mochaSky;
-    };
-  };
 
   programs.kitty = {
     enable = true;
