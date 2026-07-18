@@ -5,6 +5,7 @@
     bat
     eza
     htop
+    fastfetch
   ];
 
   programs.zsh = {
