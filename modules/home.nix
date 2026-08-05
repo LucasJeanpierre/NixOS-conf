@@ -19,6 +19,14 @@
       )
   '';
 
+  xdg.configFile."cosmic/com.system76.CosmicTerm/v1/font_name".text = ''
+      "JetBrainsMono Nerd Font Mono"
+  '';
+
+  xdg.configFile."cosmic/com.system76.CosmicTerm/v1/show_headerbar".text = ''
+      false
+  '';
+
 
   catppuccin = {
     enable = true;
