@@ -33,26 +33,4 @@
     bat.enable = true;
   };
 
-
-  programs.kitty = {
-    enable = true;
-
-    font.name = "JetBrainsMono Nerd Font";
-    font.size = 13;
-
-    settings = {
-      background_opacity = "0.85";
-      dynamic_background_color = true;
-
-      window_padding_width = 16;
-      window_padding_height = 12;
-
-      hide_window_decorations = "yes";
-
-      cursor_shape = "beam";
-      cursor_blink_interval = "0.5";
-      cursor_stop_blinking_after = 0;
-    };
-  };
-
 }
