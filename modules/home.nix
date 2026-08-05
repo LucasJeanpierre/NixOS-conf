@@ -10,7 +10,7 @@
   xdg.configFile."cosmic/com.system76.CosmicBackground/v1/all".text = ''
       (
           output: "all",
-          source: Path("/home/zeta/nixos-conf/assets/wallpaper_briancon.png"),
+          source: Path("/home/zeta/nixos-conf/assets/peaceful_mountain.png"),
           filter_by_theme: true,
           rotation_frequency: 300,
           filter_method: Lanczos,
