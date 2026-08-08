@@ -16,3 +16,6 @@ nix-switch
 ```Shell
 nix-update
 ```
+
+## Result
+<img width="1366" height="768" alt="Screenshot_2026-08-08_13-23-06" src="https://github.com/user-attachments/assets/a77a8db4-4954-4cdd-a039-9adc68e0e4ec" />
