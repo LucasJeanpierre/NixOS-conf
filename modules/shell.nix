@@ -4,7 +4,7 @@
     bat
     eza
     htop
-    fastfetch
+    screenfetch
   ];
 
   programs.zsh = {
