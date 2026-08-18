@@ -21,6 +21,7 @@
         ./configuration.nix
         ./modules/dev.nix
         ./modules/shell.nix
+        ./modules/wallpaper.nix
         catppuccin.nixosModules.catppuccin
         home-manager.nixosModules.home-manager
         {
