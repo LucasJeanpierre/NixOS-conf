@@ -35,20 +35,21 @@ RON
 in
 {
   systemd.services.wallpaper-time-based = {
-    description = "Set COSMIC wallpaper based on time of day (runs pre-login too)";
+    description = "Set COSMIC wallpaper based on time of day";
     serviceConfig = {
       Type = "oneshot";
       User = "zeta";
       ExecStart = "${wallpaperScript}";
     };
+    before = [ "cosmic-greeter-daemon.service" ];   # use the real name you find
+    wantedBy = [ "cosmic-greeter-daemon.service" ];
   };
 
   systemd.timers.wallpaper-time-based = {
-    description = "Re-check time-of-day wallpaper hourly, including before login";
+    description = "Re-check time-of-day wallpaper hourly";
     wantedBy = [ "timers.target" ];
     timerConfig = {
       OnCalendar = "hourly";
-      OnBootSec = "30s";  # run shortly after boot so the greeter is correct right away
       Persistent = true;
       Unit = "wallpaper-time-based.service";
     };
