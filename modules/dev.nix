@@ -6,5 +6,6 @@
     gh
     gcc
     neovim
+    wireguard-tools
   ];
 }
