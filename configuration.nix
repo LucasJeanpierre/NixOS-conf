@@ -41,15 +41,7 @@
 
 
   # Enable the login manager
-  services.displayManager.cosmic-greeter.enable = false;
-
-  # Temp fix to cosmic greeter issue 184
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-  };
-  catppuccin.enable = true;
-
+  services.displayManager.cosmic-greeter.enable = true;
 
   # Enable the COSMIC desktop environment
   services.desktopManager.cosmic.enable = true;
