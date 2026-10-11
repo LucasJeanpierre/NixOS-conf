@@ -7,5 +7,6 @@
     gcc
     neovim
     wireguard-tools
+    bind
   ];
 }
