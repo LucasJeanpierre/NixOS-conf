@@ -8,5 +8,6 @@
     neovim
     wireguard-tools
     bind
+    docker
   ];
 }
