@@ -13,8 +13,9 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, ... }@inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+  outputs = { self, nixpkgs, home-manager, catppuccin, ... }@inputs:
+  let
+    mkSystem = extraModules: nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
@@ -35,7 +36,11 @@
             ];
           };
         }
-      ];
+      ] ++ extraModules;
+    };
+  in {
+    nixosConfigurations = {
+      zenbook = mkSystem [ ./hosts/zenbook ];
     };
   };
 }

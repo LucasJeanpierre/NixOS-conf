@@ -3,9 +3,10 @@ NixOS configuration
 
 ## Install
 ```Shell
-git clone https://github.com/LucasJeanpierre/NixOS-conf.git ~/nixos-conf && cd nixos-conf
-cp /etc/nixos/hardware-configuration.nix ~/nixos-conf && git add hardware-configuration.nix
-sudo nixos-rebuild switch --flake .#nixos
+git clone https://github.com/LucasJeanpierre/NixOS-conf.git ~/nixos-conf && cd ~/nixos-conf
+nixos-generate-config --show-hardware-config > hosts/<name>/hardware-configuration.nix
+git add hosts/<name>
+sudo nixos-rebuild switch --flake .#<name>
 ```
 
 ## Rebuild
