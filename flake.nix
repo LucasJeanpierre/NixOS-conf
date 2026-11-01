@@ -11,9 +11,13 @@
       url = "github:catppuccin/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    asus-numberpad-driver = {
+      url = "github:asus-linux-drivers/asus-numberpad-driver";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, catppuccin, asus-numberpad-driver, ... }@inputs:
   let
     mkSystem = extraModules: nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -25,6 +29,7 @@
         ./modules/wallpaper.nix
         catppuccin.nixosModules.catppuccin
         home-manager.nixosModules.home-manager
+        asus-numberpad-driver.nixosModules.default
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
