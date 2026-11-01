@@ -19,12 +19,6 @@
     true
   '';
 
-  catppuccin = {
-    enable = true;
-    flavor = "mocha";
-    accent = "sky";
-  };
-
   programs = {
     starship.enable = true;
     neovim.enable = true;

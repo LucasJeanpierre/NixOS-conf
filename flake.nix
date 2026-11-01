@@ -7,17 +7,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    catppuccin = {
-      url = "github:catppuccin/nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     asus-numberpad-driver = {
       url = "github:asus-linux-drivers/asus-numberpad-driver";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, asus-numberpad-driver, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, asus-numberpad-driver, ... }@inputs:
   let
     mkSystem = extraModules: nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -27,7 +23,6 @@
         ./modules/dev.nix
         ./modules/shell.nix
         ./modules/wallpaper.nix
-        catppuccin.nixosModules.catppuccin
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
@@ -35,7 +30,6 @@
           home-manager.backupFileExtension = "backup";
           home-manager.users.zeta = {
             imports = [
-              catppuccin.homeModules.catppuccin
               ./modules/home.nix
             ];
           };
