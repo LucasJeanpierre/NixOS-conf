@@ -7,18 +7,6 @@
     nerd-fonts.jetbrains-mono
   ];
 
-  #xdg.configFile."cosmic/com.system76.CosmicBackground/v1/all".text = ''
-  #  (
-  #    output: "all",
-  #    source: Path("/home/zeta/nixos-conf/assets/wallpaper.png"),
-  #    filter_by_theme: true,
-  #    rotation_frequency: 300,
-  #    filter_method: Lanczos,
-  #    scaling_mode: Zoom,
-  #    sampling_method: Alphanumeric,
-  #  )
-  #'';
-
   xdg.configFile."cosmic/com.system76.CosmicTerm/v1/font_name".text = ''
     "JetBrainsMono Nerd Font Mono"
   '';
