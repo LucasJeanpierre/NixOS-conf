@@ -26,4 +26,9 @@
     nix-update = "nix flake update --flake ~/nixos-conf && nix-switch";
     nix-clean = "sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations +3 && nix-collect-garbage -d";
   };
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc.lib
+  ];
 }
