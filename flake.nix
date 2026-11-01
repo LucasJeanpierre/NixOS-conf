@@ -29,7 +29,6 @@
         ./modules/wallpaper.nix
         catppuccin.nixosModules.catppuccin
         home-manager.nixosModules.home-manager
-        asus-numberpad-driver.nixosModules.default
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
