@@ -74,7 +74,7 @@ in
     description = "Re-check time-of-day wallpaper";
     wantedBy = [ "timers.target" ];
     timerConfig = {
-      OnCalendar = "*:0/15";
+      OnCalendar = "hourly";
       Persistent = true;
       Unit = "wallpaper-time-based.service";
     };
