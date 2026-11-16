@@ -8,6 +8,8 @@
     openssl
   ];
 
+  services.resolved.enable = true;
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
