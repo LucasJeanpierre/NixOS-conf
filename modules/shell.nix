@@ -5,6 +5,7 @@
     eza
     htop
     screenfetch
+    openssl
   ];
 
   programs.zsh = {
